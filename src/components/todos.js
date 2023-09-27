@@ -233,7 +233,7 @@ function App() {
   return (
     <div className="container">
       <div className="app">
-      <img src={light} id="theme" onClick={toggleTheme}/>
+      <img src={dark} id="theme" onClick={toggleTheme}/>
 
         <h1>TO DO</h1>
         <form
