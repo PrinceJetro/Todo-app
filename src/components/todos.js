@@ -11,7 +11,8 @@ function App() {
   useEffect(() => {
     // Load tasks from local storage when the component mounts
     loadTasks();
-    toggleTheme()
+    toggleTheme();
+    setInterval(repeatedFunction, 500); // 1000 milliseconds = 1 second
   }, []); // Empty dependency array means this effect runs only once, simulating componentDidMount
 
   // Function to load tasks from local storage
@@ -174,6 +175,60 @@ function App() {
         icon.src = dark
       }
     }
+
+
+        // Define a function to be called repeatedly
+    function repeatedFunction() {
+      let icon = document.getElementById("theme")
+      if (icon.src != dark){
+        document.querySelector(".container").style.backgroundColor="hsl(235, 21%, 11%)"
+        document.querySelector(".app form input").style.backgroundColor="hsl(235, 21%, 11%)"
+        document.querySelector("ul").style.backgroundColor="hsl(235, 21%, 11%)"
+         // Select all elements with the class "task"
+         const listElements = document.querySelectorAll(".task");
+         // Loop through the selected elements and change their background color
+         listElements.forEach((element) => {
+           element.style.color = "white";
+           element.style.backgroundColor = "hsl(235, 21%, 11%)";
+         });
+ 
+         // Select all elements with the class "list"
+         const list = document.querySelectorAll(".list");
+         // Loop through the selected elements and change their background color
+         list.forEach((element) => {
+           element.style.color = "white";
+           element.style.backgroundColor = "hsl(235, 21%, 11%)";
+         });
+         document.getElementById("number").style.color="white"
+         document.querySelector(".app form input").style.color="white"
+         document.querySelector(".attribution").style.color="white"
+      }
+      else{
+        document.querySelector(".container").style.backgroundColor="white"
+        document.querySelector(".app form input").style.backgroundColor="white"
+        document.querySelector("ul").style.backgroundColor="white"
+        // Select all elements with the class "task"
+        const listElements = document.querySelectorAll(".task");
+        // Loop through the selected elements and change their background color
+        listElements.forEach((element) => {
+          element.style.color = "black";
+          element.style.backgroundColor = "white";
+        });
+
+        // Select all elements with the class "list"
+        const list = document.querySelectorAll(".list");
+        // Loop through the selected elements and change their background color
+        list.forEach((element) => {
+          element.style.color = "black";
+          element.style.backgroundColor = "white";
+        });
+        document.getElementById("number").style.color="black"
+        document.querySelector(".app form input").style.color="black"
+        document.querySelector(".attribution").style.color="black"
+      }
+
+    }
+
 
   return (
     <div className="container">
