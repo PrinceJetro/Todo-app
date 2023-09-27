@@ -1,0 +1,125 @@
+@import url("https://fonts.google.com/specimen/Josefin+Sans");
+
+* {
+  margin: 0
+}
+body{
+  background-color:black;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("./images/bg-desktop-dark.jpg");
+  background-repeat: no-repeat;
+  background-color: hsl(235, 21%, 11%);
+  height: 100vh;
+  font-family: Josefin;
+}
+
+.app {
+  margin-top: 50px;
+  width: 60%;
+}
+
+@media (max-width:768px) {
+  .app {
+    width: 90%;
+  }
+}
+
+.app h1 {
+  color: white;
+  font-size: 40px;
+  padding: 10px 0;
+  border-radius: .5rem .5rem 0 0;
+  font-family: "Josefin";
+  font-weight: 900;
+}
+
+#theme{
+  float: right;
+
+}
+
+.app form {
+  display: flex;
+  width: 100%;
+}
+
+.app form input {
+  border: none;
+  border-radius: 10px;
+  background-color: hsl(235, 24%, 19%);
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+}
+
+.app ul {
+  list-style: none;
+  color: #e0e0e0;
+  padding: 0;
+  border-radius: 10px;
+  background-color: #262e4c;
+  padding: 2px;
+}
+
+.app ul li {
+  padding: 10px;
+  border-bottom: 1px solid #3a4674;
+    
+}
+
+.check {
+  width: 0.8em;
+  height: 0.8em;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.check:checked {
+  background-color: #1dd2af;
+}
+
+.task {
+  font-size: 24px;
+  padding: 0 10px;
+  width: fit-content;
+  background: transparent;
+  border: none;
+  color: #fff;
+  height: 1000px;
+}
+
+.task:focus {
+  outline: none;
+}
+
+.app ul li .remove {
+  float: right;
+  cursor: pointer;
+}
+
+.app ul li i:hover {
+  color: rgb(255, 82, 82);
+}
+
+.completed {
+  color: rgba(192, 192, 192, 0.8);
+  text-decoration: line-through;
+}
+
+.number{
+  color: #e0e0e0;
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
