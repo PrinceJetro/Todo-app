@@ -276,7 +276,7 @@ function App() {
           <button className='btn btn-primary mr-3' onClick={() => displayTasks('completed')}>Completed</button>
         </div>
         
-      <div class="attribution mt-5">
+      <div className="attribution mt-5">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="http://adegbuyi-jephthah.vercel.app/" target="_blank">PrinceJetro</a>.
       </div>
